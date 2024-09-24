@@ -88,3 +88,7 @@ code.text-\[\.9em\] {
     display: none;
   }
 }
+
+* {
+  cursor: none !important;
+}

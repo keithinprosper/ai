@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import NextTopLoader from "nextjs-toploader";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import CustomCursor from "@/components/custom-cursor";
 
 export const metadata = {
   title: "Pixaify",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }: any) {
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen">
+        <CustomCursor />
         <NextTopLoader color="#2564eb" height={5} showSpinner={false} />
         <section>
           <Suspense

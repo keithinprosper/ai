@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { RiStarSFill } from "react-icons/ri";
 import Image from "next/image";
 
 const images = [
@@ -16,16 +17,6 @@ const images = [
 
   {
     url: "/images/logo/logo-4.svg",
-    alt: "Logo",
-  },
-
-  {
-    url: "/images/logo/logo-5.svg",
-    alt: "Logo",
-  },
-
-  {
-    url: "/images/logo/logo-6.svg",
     alt: "Logo",
   },
 
@@ -63,11 +54,6 @@ const images = [
     url: "/images/logo/logo-13.svg",
     alt: "Logo",
   },
-
-  {
-    url: "/images/logo/logo-14.svg",
-    alt: "Logo",
-  },
 ];
 
 const Carousel = () => {
@@ -86,20 +72,18 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div>
-      <div
-        className="items-center justify-center flex text-3xl font-bold md:pb-10 px-10
-  bg-gradient-to-r
-  from-purple-500
-  to-green-300
-  bg-clip-text
-  text-transparent
-  "
-      >
-        More than 50+ brands have created AI headshots with Framecast AI.
+    <div className="mt-[-70px]">
+      <div className="flex items-center justify-center pb-4">
+        <RiStarSFill size={20} color="#c2410c" />
+        <RiStarSFill size={20} color="#c2410c" />
+        <RiStarSFill size={20} color="#c2410c" />
+        <RiStarSFill size={20} color="#c2410c" />
+        <RiStarSFill size={20} color="#c2410c" />
       </div>
-
-      <div className="grid grid-cols-3 p-4 md:flex">
+      <div className="items-center justify-center flex text-md font-md px-10 uppercase tracking-wider text-slate-400">
+        Trusted by leading brands & professionals.
+      </div>
+      <div className="grid grid-cols-3 px-52 mt-[-2rem] md:flex">
         <AnimatePresence custom={currentImageIndex}>
           {images.map((image, index) => (
             <motion.div
@@ -108,13 +92,13 @@ const Carousel = () => {
               animate={{
                 opacity: index === currentImageIndex ? 1 : 0.5,
                 scale: index === currentImageIndex ? 1.2 : 1,
-                transition: { duration: 0.5 },
+                transition: { duration: 0.1 },
               }}
               className="flex justify-center items-center h-40 w-40"
               exit={{ opacity: 0 }}
               custom={index}
               transition={{
-                opacity: { duration: 0.5 },
+                opacity: { duration: 0.3 },
               }}
             >
               <Image
