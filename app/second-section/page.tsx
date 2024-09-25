@@ -2,57 +2,36 @@
 
 import React from "react";
 import Image from "next/image";
+import Showcase from "../showcase/page";
+import Carousal from "@/components/Carousal";
 
-const features = [
-  {
-    name: "Customizable",
-    description:
-      "Unleash your creative vision! Choose from a vast library of designer-crafted templates as a starting point for your AI-generated headshot.",
-    image: "/images/icon-cloud.png",
-    alt: "Customizable",
-    color: "blue",
-  },
-  {
-    name: "Fast & Effortless",
-    description:
-      "Skip the photoshoot! Generate stunning, high-quality headshots in seconds, right from your browser.",
-    image: "/images/icon-fast.png",
-    alt: "Fast & Effortless",
-  },
-  {
-    name: "Seamless Integrations",
-    description:
-      "Integrate Framecast AI seamlessly into your existing workflow. Effortlessly generate headshots.",
-    image: "/images/icon-journey.png",
-    alt: "Seamless Integrations",
-  },
-  {
-    name: "Full Stack Solution",
-    description:
-      "Framecast AI goes beyond headshot generation. Our comprehensive platform offers a suite of features to elevate your professional image.",
-    image: "/images/icon-layer.png",
-    alt: "Full Stack Solutions",
-  },
-  {
-    name: "Loyalty",
-    description:
-      "Set up your loyalty program and start rewarding your customers for their purchases and actions they take on your site.",
-    image: "/images/icon-location.png",
-    alt: "Loyalty",
-  },
-  {
-    name: "Support",
-    image: "/images/icon-support-1.png",
-    description:
-      "Get 24/7 support from our team to help you with any issues you have.",
-    alt: "Support",
-  },
+const humans = [
+  "/headshots/human1.jpeg",
+  "/headshots/human2.jpeg",
+  "/headshots/human3.jpeg",
+  "/headshots/human4.jpeg",
+  "/headshots/human5.jpg",
+  "/headshots/human6.jpeg",
+  "/headshots/human7.jpg",
+  "/headshots/human8.jpeg",
+];
+
+const products = [
+  "/headshots/prod1.jpg",
+  "/headshots/prod2.jpeg",
+  "/headshots/prod3.jpeg",
+  "/headshots/prod4.jpeg",
+  "/headshots/prod5.jpg",
+  "/headshots/prod6.jpg",
+  "/headshots/prod7.jpg",
+  "/headshots/prod8.jpeg",
 ];
 
 const SecondSection = () => {
   return (
     <div>
       <div className="flex flex-col justify-center items-center">
+        {/* Circle element */}
         <div className="relative flex flex-col items-center">
           {/* Circle with gradient and number */}
           <div className="bg-gradient-to-l from-orange-500 to-orange-300 text-white rounded-full h-12 w-12 flex items-center justify-center font-bold z-10">
@@ -61,16 +40,15 @@ const SecondSection = () => {
           {/* Gradient stroke line with fade out at the end */}
           <div className="w-1 h-10 rounded-lg bg-gradient-to-b from-orange-600 to-transparent mt-[-2px]"></div>
         </div>
-
+        {/* Text element */}
         <div className="text-6xl font-bold text-center mt-2">
           Upload your photos
         </div>
-
         <div className="items-center justify-center flex text-xl font-md px-10 tracking-wider text-slate-700 mt-4 max-w-4xl text-center">
           Submit 4 or more high-quality selfies. Ensure they are front-facing,
           with only one person, no hats or accessories.
         </div>
-
+        {/* Graphic element */}
         <div className="flex justify-center items-center mt-8">
           <div className="flex flex-col items-center">
             {/* Row with images on left, center, and right */}
@@ -134,7 +112,7 @@ const SecondSection = () => {
                   src="/avatars/phone.svg"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-2xl drop-shadow-xl"
+                  className="rounded-2xl drop-shadow-2xl"
                   alt="Center image"
                   loading="eager"
                 />
@@ -202,6 +180,59 @@ const SecondSection = () => {
               </div>
             </div>
           </div>
+        </div>
+        {/* Circle element */}
+        <div className="relative flex flex-col items-center mt-8">
+          {/* Circle with gradient and number */}
+          <div className="bg-gradient-to-l from-[#ff6856] to-[#ff9d92] text-white rounded-full h-12 w-12 flex items-center justify-center font-bold z-10">
+            2
+          </div>
+          {/* Gradient stroke line with fade out at the end */}
+          <div className="mt-[-75px] w-1 h-28 rounded-lg bg-gradient-to-b from-transparent via-[#ff6856] to-transparent bg-[length:100%_100%]"></div>
+        </div>
+        {/* Text element */}
+        <div className="text-6xl font-bold text-center mt-2">
+          Our AI gets to work
+        </div>
+        <div className="items-center justify-center flex text-xl font-md px-10 tracking-wider text-slate-700 mt-4 max-w-4xl text-center">
+          The AI magic takes ~20 minutes. You'll get an email when it's ready.
+        </div>
+
+        {/* Video element */}
+        <div className="flex justify-center items-center mt-8">
+          <div className="relative w-[1050px] border-orange-700 border-4 h-[600px] rounded-2xl overflow-hidden drop-shadow-lg">
+            <video
+              src="/avatars/showcase.mp4"
+              autoPlay
+              loop
+              muted
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Circle element */}
+        <div className="relative flex flex-col items-center mt-16">
+          {/* Circle with gradient and number */}
+          <div className="bg-gradient-to-l from-black to-slate-100 text-white rounded-full h-12 w-12 flex items-center justify-center font-bold z-10">
+            3
+          </div>
+          {/* Gradient stroke line with fade out at the end */}
+          <div className="mt-[-90px] w-1 h-14 rounded-lg bg-gradient-to-b from-transparent to-black"></div>
+        </div>
+
+        {/* Text element */}
+        <div className="text-6xl font-bold text-center mt-10">
+          Get amazing headshots
+        </div>
+        <div className="items-center justify-center flex text-xl font-md px-10 tracking-wider text-slate-700 mt-4 max-w-4xl text-center">
+          You'll receive multiple AI headshots, ready for all use cases — from
+          personal to professional — depending on the style you choose.
+        </div>
+
+        <div className="animate-fadeIn container mx-auto pt-10">
+          <Carousal images={humans} />
+          <Carousal images={products} reverse={true} />
         </div>
       </div>
     </div>

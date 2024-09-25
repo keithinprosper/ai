@@ -39,8 +39,7 @@ const Showcase = () => {
   return (
     <div className="animate-fadeIn">
       <Carousal images={humans} />
-      {/* <Carousal images={animals} reverse={true} />
-      <Carousal images={products} /> */}
+      {/* <Carousal images={animals} reverse={true} /> */}
     </div>
   );
 };

@@ -6,7 +6,6 @@ import { redirect } from "next/navigation";
 import FirstSection from "./first-section/page";
 import Carousel from "../components/ui/carousel";
 import SecondSection from "./second-section/page";
-import ExplainerSection from "./explainer-section/page";
 import ThirdSection from "./third-section/page";
 import FourthSection from "./fourth-section/page";
 import PricingSection from "./pricing/page";
@@ -31,7 +30,6 @@ export default async function Index() {
       <FirstSection />
       <Carousel />
       <SecondSection />
-      <ExplainerSection />
       <ThirdSection />
       <FourthSection />
       <PricingSection />
