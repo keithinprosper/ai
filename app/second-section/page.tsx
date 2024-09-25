@@ -2,9 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-
-import hero from "/public/hero.webp";
 
 const features = [
   {
@@ -54,114 +51,157 @@ const features = [
 
 const SecondSection = () => {
   return (
-    <div className="">
-      <div
-        className="
-md:flex-row  
-flex-col
-items-center
-flex  justify-center pb-10"
-      >
-        <div className="p-5 justify-center md:w-1/3">
-          <div
-            className="
-                bg-gradient-to-r
-                from-blue-800
-                to-green-300
-                bg-clip-text
-                text-transparent
-                text-4xl
-                md:text-6xl
-                font-bold
-                pb-10"
-          >
-            From startup to enterprise, Framecast AI is built for every type of
-            business.
+    <div>
+      <div className="flex flex-col justify-center items-center">
+        <div className="relative flex flex-col items-center">
+          {/* Circle with gradient and number */}
+          <div className="bg-gradient-to-l from-orange-500 to-orange-300 text-white rounded-full h-12 w-12 flex items-center justify-center font-bold z-10">
+            1
           </div>
-          <div className="text-2xl mb-8">
-            Built for all businesses and communities, Framecast AI is the only
-            platform you need to grow your business.
-          </div>
-
-          <Link href="/login">
-            <button
-              className="bg-blue-600 text-white p-4 text-lg justify-center flex md:w-1/3 rounded-lg hover:bg-blue-500 font-medium
-          transition transform motion-reduce:transition-none motion-reduce:hover:transform-none"
-            >
-              Get Started
-            </button>
-          </Link>
+          {/* Gradient stroke line with fade out at the end */}
+          <div className="w-1 h-10 rounded-lg bg-gradient-to-b from-orange-600 to-transparent mt-[-2px]"></div>
         </div>
 
-        <div className="lg:w-1/2 w-full mt-8 lg:mt-0">
-          <img
-            src={hero.src}
-            alt="AI Headshot Illustration"
-            className="rounded-lg object-cover w-full h-full"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      <div className="flex-col items-center justify-center">
-        <div
-          className="
-                text-3xl
-                flex
-                justify-center
-                md:text-5xl
-                font-bold
-                pt-5
-                pb-10
-                bg-gradient-to-r
-                from-purple-400
-                to-blue-800
-                bg-clip-text
-                text-transparent"
-        >
-          Product Features
+        <div className="text-6xl font-bold text-center mt-2">
+          Upload your photos
         </div>
 
-        <div className="grid grid-cols-1 p-4 md:grid md:grid-cols-3 gap-4 md:px-40">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="flex-col space-y-6 pb-10 border
-                        
-                        p-8 rounded-xl items-center justify-center w-full hover:scale-105 transform transition-all duration-500 ease-in-out
-                        "
-            >
-              <div
-                className="
-                            text-gray-600 text-3xl font-bold
-                            "
-              >
+        <div className="items-center justify-center flex text-xl font-md px-10 tracking-wider text-slate-700 mt-4 max-w-4xl text-center">
+          Submit 4 or more high-quality selfies. Ensure they are front-facing,
+          with only one person, no hats or accessories.
+        </div>
+
+        <div className="flex justify-center items-center mt-8">
+          <div className="flex flex-col items-center">
+            {/* Row with images on left, center, and right */}
+            <div className="flex justify-between w-full max-w-7xl">
+              {/* Left side */}
+              <div className="flex flex-col items-center justify-center">
+                <div className="flex gap-6 mb-1">
+                  {/* Three images up */}
+                  <Image
+                    src="/avatars/7.png"
+                    width={105}
+                    height={105}
+                    className="rounded-2xl drop-shadow-lg"
+                    alt="image 1"
+                  />
+                  <Image
+                    src="/avatars/1.png"
+                    width={105}
+                    height={105}
+                    className="rounded-2xl drop-shadow-lg"
+                    alt="image 2"
+                  />
+                  <Image
+                    src="/avatars/8.png"
+                    width={105}
+                    height={105}
+                    className="rounded-2xl drop-shadow-lg"
+                    alt="image 3"
+                  />
+                </div>
+                <div className="flex gap-6 mt-6">
+                  {/* Three images down */}
+                  <Image
+                    src="/avatars/4.png"
+                    width={105}
+                    height={105}
+                    className="rounded-2xl drop-shadow-lg"
+                    alt="image 4"
+                  />
+                  <Image
+                    src="/avatars/9.png"
+                    width={105}
+                    height={105}
+                    className="rounded-2xl drop-shadow-lg"
+                    alt="image 5"
+                  />
+                  <Image
+                    src="/avatars/3.png"
+                    width={105}
+                    height={105}
+                    className="rounded-2xl drop-shadow-lg"
+                    alt="image 6"
+                  />
+                </div>
+              </div>
+
+              {/* Center image */}
+              <div className="relative mx-8 w-[220px] h-[480px]">
+                {/* Image */}
                 <Image
-                  src={feature.image}
-                  alt={feature.alt}
-                  width={300}
-                  height={300}
-                  className="object-contain h-20 w-20 items-center justify-center flex mb-10"
+                  src="/avatars/phone.svg"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-2xl drop-shadow-xl"
+                  alt="Center image"
+                  loading="eager"
                 />
-                <div>
-                  <div
-                    className="text-2xl pb-4 bg-gradient-to-t
-                                    from-black
-                                    to-gray-400
-                                    bg-clip-text
-                                    text-transparent
-                                    "
-                  >
-                    {feature.name}
-                  </div>
 
-                  <div className="bg-gradient-to-r from-gray-800 to-gray-500 bg-clip-text text-transparent text-lg">
-                    {feature.description}
-                  </div>
+                {/* Video positioned on top of the image */}
+                <video
+                  src="/avatars/tutorial.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  className="absolute top-6 left-1/2 transform -translate-x-1/2 w-[200px] h-[430px] rounded-3xl"
+                />
+              </div>
+
+              {/* Right side */}
+              <div className="flex flex-col items-center justify-center">
+                <div className="flex gap-6 mb-1">
+                  {/* Three images up */}
+                  <Image
+                    src="/avatars/5.png"
+                    width={105}
+                    height={105}
+                    className="rounded-2xl drop-shadow-lg"
+                    alt="image 7"
+                  />
+                  <Image
+                    src="/avatars/10.png"
+                    width={105}
+                    height={105}
+                    className="rounded-2xl drop-shadow-lg"
+                    alt="image 8"
+                  />
+                  <Image
+                    src="/avatars/6.png"
+                    width={105}
+                    height={105}
+                    className="rounded-2xl drop-shadow-lg bg-white "
+                    alt="image 9"
+                  />
+                </div>
+                <div className="flex gap-6 mt-6">
+                  {/* Three images down */}
+                  <Image
+                    src="/avatars/12.png"
+                    width={105}
+                    height={105}
+                    className="rounded-2xl drop-shadow-lg"
+                    alt="image 10"
+                  />
+                  <Image
+                    src="/avatars/2.png"
+                    width={105}
+                    height={105}
+                    className="rounded-2xl drop-shadow-lg"
+                    alt="image 11"
+                  />
+                  <Image
+                    src="/avatars/11.png"
+                    width={105}
+                    height={105}
+                    className="rounded-2xl drop-shadow-lg"
+                    alt="image 12"
+                  />
                 </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </div>

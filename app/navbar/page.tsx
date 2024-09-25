@@ -45,10 +45,14 @@ export default async function Navbar() {
     flex
     justify-between
     items-center
-    h-16  /* Fixed height */
+    h-16  
     px-10
     border-b
     py-2
+    sticky
+    top-0
+    z-50
+    bg-white 
   "
     >
       <Link href="/">
