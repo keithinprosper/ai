@@ -1,26 +1,168 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import React from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
+  ArrowRight,
+  ChevronDown,
+  ChevronUp,
+  Camera,
+  Users,
+  Sparkles,
+} from "lucide-react";
 
 const FifthSection = () => {
   return (
-    <div className="md:pt-20 p-10">
-      <div className="border-[1px] md:w-2/3 mx-auto p-10 rounded-xl">
-        <div className="text-4xl font-bold mb-5">
-          Start building your online AI headshots today.
+    <>
+      <div className="bg-orange-100 py-20 flex flex-col items-center justify-center mt-36">
+        <div className="max-w-screen-2xl w-full px-10 flex items-start justify-between mb-12">
+          <div className="flex flex-col">
+            <div
+              className="text-7xl font-bold pb-2 text-gradient bg-gradient-to-l from-orange-700 to-red-400
+            bg-clip-text text-transparent"
+            >
+              Frequently asked questions.
+            </div>
+            <div className="mt-2 text-xl font-medium text-slate-700 tracking-wider">
+              Have more questions? You can email us at support@pixaify.
+            </div>
+          </div>
+          {/* Right Section: Accordion */}
+          <div className="w-full max-w-3xl ml-20">
+            {/* Adjusted max-w-3xl for more width */}
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-xl text-left">
+                  {/* Text left alignment */}
+                  Can I get more credits at anytime?
+                </AccordionTrigger>
+                <AccordionContent>
+                  Yes, you can get more credits whenever you want. No questions
+                  are asked while you do that and we would highly appreciate if
+                  you will give us some feedback.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-xl text-left">
+                  How does Pixaify's pricing work?
+                </AccordionTrigger>
+                <AccordionContent>
+                  Our one-time payment plans are tiered according to the credits
+                  you buy. Understanding the task at hand and ironing out the
+                  wrinkles is key.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-xl text-left">
+                  How secure is Pixiafy?
+                </AccordionTrigger>
+                <AccordionContent>
+                  Protecting the data you trust to Pixaify is our first
+                  priority. This part is really crucial in keeping the project
+                  in line to completion.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger className="text-xl text-left">
+                  I have purchased the application. How do I get started?
+                </AccordionTrigger>
+                <AccordionContent>
+                  We have thoroughly written documentation that will help you
+                  get started with the application. We have also included many
+                  other tips and tricks within the documentation.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-5">
+                <AccordionTrigger className="text-xl text-left">
+                  How do I increase the credits for any account?
+                </AccordionTrigger>
+                <AccordionContent>
+                  To increase the credits for any account, you can either
+                  purchase the credits by using one of the payment gateways
+                  attached or you can visit your database and manually increase
+                  the credits.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-6">
+                <AccordionTrigger className="text-xl text-left">
+                  Do I get access to every single headshot as shown?
+                </AccordionTrigger>
+                <AccordionContent>
+                  Yes, you get access to every single headshot generated for
+                  lifetime.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
         </div>
-        <div>
-          Curious about how Framecast AI can help your business? Get in touch
-          with our team to learn more about our platform and how we can help you
-          grow your business.
-        </div>
-
-        <Link href="/login">
-          <Button className="px-6 py-3 md:w-1/4 mt-5 rounded-lg text-white text-lg bg-blue-600 hover:bg-blue-500">
-            Contact Us
-          </Button>
-        </Link>
       </div>
-    </div>
+
+      <div>
+        <div className="py-24 px-2 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="rounded-3xl p-8 lg:p-12 shadow-custom-shadow flex flex-col lg:flex-row items-center justify-between">
+              <div className="mb-12 lg:mb-0 lg:mr-12 lg:w-1/2">
+                <h2 className="text-4xl lg:text-5xl font-extrabold text-dark mb-6 leading-tight">
+                  Elevate Your{" "}
+                  <span className="text-gradient bg-gradient-to-l from-orange-700 to-red-400 bg-clip-text text-transparent">
+                    Professional Image
+                  </span>
+                </h2>
+                <p className="text-xl mb-8">
+                  AI-powered headshots crafted for success in the modern
+                  business world
+                </p>
+                <div className="flex items-center mb-10">
+                  {/* Camera Icon with Orange Color */}
+                  <Camera className="w-6 h-6 mr-3 text-orange-700" />
+                  <span className="text-md font-semibold text-black">
+                    Premium quality starting at just $4.99
+                  </span>
+                </div>
+                <a
+                  href="/login"
+                  className="inline-flex items-center justify-center text-orange-700 text-dark font-bold py-4 px-8 rounded-lg text-lg border-4 border-orange-700 shadow-lg hover:shadow-xl transition-all duration-300 group"
+                >
+                  Get Your AI Headshot
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                </a>
+              </div>
+              <div className="w-full lg:w-1/2 flex justify-center items-center">
+                <div className="relative w-80 h-80">
+                  {/* Top image */}
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-40 rounded-full overflow-hidden border-4 border-orange-700 shadow-custom-shadow">
+                    <img
+                      src="/content/headshot14.webp"
+                      alt="AI Headshot Example 1"
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  {/* Bottom left image */}
+                  <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full overflow-hidden border-4 border-orange-700 shadow-custom-shadow">
+                    <img
+                      src="/content/headshot15.webp"
+                      alt="AI Headshot Example 2"
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  {/* Bottom right image */}
+                  <div className="absolute bottom-0 right-0 w-40 h-40 rounded-full overflow-hidden border-4 border-orange-700 shadow-custom-shadow">
+                    <img
+                      src="/content/headshot16.webp"
+                      alt="AI Headshot Example 3"
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

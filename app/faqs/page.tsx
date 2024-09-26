@@ -35,7 +35,7 @@ const Faqs = () => {
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger className="text-xl">
-              How does Framecast AI's pricing work?
+              How does Pixaify's pricing work?
             </AccordionTrigger>
             <AccordionContent>
               Our one time payment plans are tiered according to the credits you
@@ -45,12 +45,12 @@ const Faqs = () => {
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger className="text-xl">
-              How secure is Framecast AI?
+              How secure is Pixaify?
             </AccordionTrigger>
             <AccordionContent>
-              Protecting the data you trust to Framecast AI is our first
-              priority. This part is really crucial in keeping the project in
-              line to completion.
+              Protecting the data you trust to Pixaify is our first priority.
+              This part is really crucial in keeping the project in line to
+              completion.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
