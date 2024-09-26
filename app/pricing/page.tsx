@@ -1,88 +1,136 @@
 import Link from "next/link";
-import { Button } from "../../components/ui/button";
-
-const pricingOptions = [
-  {
-    title: "Starter",
-    price: "1 Credit",
-    description:
-      "Perfect for individuals looking to enhance their online presence.",
-    features: ["4 AI Headshots"],
-    buttonText: "Choose Starter",
-    bgColor: "bg-white",
-  },
-  {
-    title: "Standard",
-    price: "3 Credits",
-    description:
-      "Ideal for professionals requiring frequent updates to their profiles.",
-    features: ["12 AI Headshots"],
-    buttonText: "Choose Basic",
-    bgColor: "bg-blue-50",
-  },
-  {
-    title: "Premium",
-    price: "5 Credits",
-    description: "The best value with unlimited possibilities.",
-    features: ["20 AI Headshots"],
-    buttonText: "Choose Premium",
-    bgColor: "bg-white",
-  },
-];
 
 const Pricing = () => {
   return (
-    <div className="flex flex-col justify-center items-center pb-10 my-20">
+    <div className="flex flex-col items-center justify-center my-20">
       <div
-        className="text-4xl text-center md:text-6xl font-bold 
-    bg-gradient-to-r
-    from-black
-    to-gray-500
-    bg-clip-text
-    text-transparent
-    md:pb-10
-    "
+        className="text-7xl text-center font-bold pb-4 text-gradient bg-gradient-to-l from-orange-700 to-red-400
+        max-w-4xl bg-clip-text text-transparent"
       >
-        Pricing
-        <div className="text-2xl text-center md:text-4xl font-bold md:py-10">
-          Simple & transparent pricing plans for all businesses.
-        </div>
+        Premium quality without the premium price.
+      </div>
+      <div className="text-center text-xl font-medium text-slate-700 px-10 mt-4 max-w-4xl tracking-wider">
+        Update your LinkedIn profile picture, boost your job application rate,
+        or upgrade your company's website with our tailored AI headshot plans.
       </div>
 
-      <div className="w-full max-w-6xl p-4 rounded-lg space-y-8">
-        <div className="flex flex-wrap justify-center lg:space-x-4 space-y-4 lg:space-y-0 items-stretch">
-          {pricingOptions.map((option, index) => (
-            <div
-              key={index}
-              className={`flex flex-col border rounded-lg p-4 w-full lg:w-1/4 ${option.bgColor}`}
-            >
-              <div className="flex-grow space-y-4">
-                <h3 className="text-2xl font-semibold text-center">
-                  {option.title}
-                </h3>
-                <p className="text-xl font-bold text-center mb-2">
-                  {option.price}
-                </p>
-                <p className="text-sm text-gray-600 text-center">
-                  {option.description}
-                </p>
-                <ul className="space-y-2 mb-4 pl-4">
-                  {option.features.map((feature, fIndex) => (
-                    <li key={fIndex} className="flex items-center space-x-2">
-                      <span className="text-green-500">✔</span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-4 lg:gap-6 mt-16 mb-12">
+        {/* Starter Plan */}
+        <div className="relative mx-auto h-full w-full max-w-lg rounded-lg border bg-white p-12 border-black/[0.08]">
+          <div className="flex h-full flex-col px-6">
+            <div className="uppercase text-center tracking-wider mb-1 text-base text-black/50">
+              Starter
+            </div>
+            <div className="flex flex-col text-center text-[4rem] font-extrabold leading-none tracking-tight lg:text-[4.5rem]">
+              <span className="line-through text-[2.5rem] opacity-20">$59</span>
+              <span className="mt-1">$35</span>
+            </div>
+            <ul className="flex-grow flex flex-col gap-3 pt-9 pb-10">
+              <li className="text-black/70">
+                📸 <b>20</b> high-quality headshots
+              </li>
+              <li className="text-black/70">
+                ⏱️ <b>2</b>-hour processing time
+              </li>
+              <li className="text-black/70">
+                👕 <b>5</b> outfits and backgrounds
+              </li>
+              <li className="text-black/70">
+                🕺 <b>5</b> poses
+              </li>
+            </ul>
+            <div className="flex justify-center">
+              <Link href="/login">
+                <button className="flex w-[250px] justify-center items-center bg-orange-700 hover:bg-orange-800 font-medium text-white px-14 py-3 rounded-xl text-lg transition tracking-wider">
+                  Buy Starter
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Basic Plan */}
+        <div className="relative mx-auto h-full w-full max-w-lg rounded-lg p-[2px] bg-gradient-to-l from-orange-700 to-red-400">
+          <div className="flex flex-col h-full w-full rounded-lg bg-white p-12">
+            <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-orange-500 bg-white px-4 py-1 text-sm font-semibold shadow-md">
+              <span className="text-gradient bg-gradient-to-l from-orange-700 to-red-400 bg-clip-text text-transparent">
+                82% pick this plan
+              </span>
+            </div>
+            <div className="flex h-full flex-col">
+              <div className="uppercase text-center tracking-wider mb-1 text-base text-black/50">
+                Basic
               </div>
-              <div className="mt-10 text-center">
+              <div className="flex flex-col text-center text-[4rem] font-extrabold leading-none tracking-tight lg:text-[4.5rem]">
+                <span className="line-through text-[2.5rem] opacity-20">
+                  $79
+                </span>
+                <span className="mt-1 text-gradient bg-gradient-to-l from-orange-700 to-red-400 bg-clip-text text-transparent">
+                  $45
+                </span>
+              </div>
+              <ul className="flex-grow flex flex-col gap-3 pt-9 pb-10">
+                <li className="text-black/70">
+                  📸 <b>60</b> high-quality headshots
+                </li>
+                <li className="text-black/70">
+                  ⏱️ <b>1</b>-hour processing time
+                </li>
+                <li className="text-black/70">
+                  👕 <b>20</b> outfits and backgrounds
+                </li>
+                <li className="text-black/70">
+                  🕺 <b>20</b> poses
+                </li>
+              </ul>
+              <div className="flex justify-center">
                 <Link href="/login">
-                  {" "}
-                  <Button className="w-3/4">{option.buttonText}</Button>
+                  <button className="flex w-[250px] justify-center items-center bg-gradient-to-l from-orange-700 to-red-400 hover:from-orange-800 hover:to-red-500 font-medium text-white px-14 py-3 rounded-xl text-lg transition tracking-wider">
+                    Buy Basic
+                  </button>
                 </Link>
               </div>
             </div>
-          ))}
+          </div>
+        </div>
+
+        {/* Premium Plan */}
+        <div className="relative mx-auto h-full w-full max-w-lg rounded-lg border bg-white p-12 border-black/[0.08]">
+          <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full border bg-white px-4 py-1 text-sm shadow-md font-semibold border-black/[0.08]">
+            <span className="text-[#ee3f87]">Best Value</span>
+          </div>
+          <div className="flex h-full flex-col">
+            <div className="uppercase text-center tracking-wider mb-1 text-base text-black/50">
+              Premium
+            </div>
+            <div className="flex flex-col text-center text-[4rem] font-extrabold leading-none tracking-tight lg:text-[4.5rem]">
+              <span className="line-through text-[2.5rem] opacity-20">
+                $129
+              </span>
+              <span className="mt-1">$75</span>
+            </div>
+            <ul className="flex-grow flex flex-col gap-3 pt-9 pb-10">
+              <li className="text-black/70">
+                📸 <b>100</b> high-quality headshots
+              </li>
+              <li className="text-black/70">
+                ⏱️ <b>30</b>-min processing time
+              </li>
+              <li className="text-black/70">
+                👕 <b>40</b> outfits and backgrounds
+              </li>
+              <li className="text-black/70">
+                🕺 <b>40</b> poses
+              </li>
+            </ul>
+            <div className="flex justify-center">
+              <Link href="/login">
+                <button className="flex w-[250px] justify-center items-center bg-orange-700 hover:bg-orange-800 font-medium text-white px-14 py-3 rounded-xl text-lg transition tracking-wider">
+                  Buy Premium
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
