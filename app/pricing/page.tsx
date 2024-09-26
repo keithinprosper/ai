@@ -32,7 +32,7 @@ const pricingOptions = [
 
 const Pricing = () => {
   return (
-    <div className="flex flex-col justify-center items-center pb-10">
+    <div className="flex flex-col justify-center items-center pb-10 my-20">
       <div
         className="text-4xl text-center md:text-6xl font-bold 
     bg-gradient-to-r

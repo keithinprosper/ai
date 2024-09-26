@@ -31,8 +31,8 @@ export default async function Index() {
       <Carousel />
       <SecondSection />
       <ThirdSection />
-      <FourthSection />
       <PricingSection />
+      <FourthSection />
       <FifthSection />
     </div>
   );
