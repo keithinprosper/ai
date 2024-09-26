@@ -1,78 +1,37 @@
+import Testimonial from "@/components/Testimonials";
 import Image from "next/image";
+import Link from "next/link";
+import { FaPaintBrush } from "react-icons/fa";
 
 const ThirdSection = () => {
   return (
-    <div className="flex p-10 flex-col md:flex-row md:justify-evenly">
-      <div className="flex-col md:flex-row gap-6 md:px-10 flex">
-        <div className="md:w-2/3 w-full">
-          <video className="rounded-xl" autoPlay muted loop preload="none">
-            <source src="/content/video-3.mp4" type="video/mp4" />
-          </video>
+    <div className="bg-orange-100 py-20">
+      <div className="flex justify-center items-center">
+        <div
+          className="text-7xl flex justify-center text-center font-bold pb-4 text-gradient bg-gradient-to-r from-orange-700
+        max-w-3xl to-red-400 bg-clip-text text-transparent"
+        >
+          5000+ AI headshots generated.
         </div>
-        <div className="flex-col border p-4 rounded-xl md:w-2/5">
-          <div
-            className="text-4xl flex justify-center text-center 
-                md:text-6xl
-                bg-gradient-to-r
-                from-yellow-300
-                to-blue-300
-                bg-clip-text
-                text-transparent
-                font-bold
-                "
+      </div>
+      <div className="text-center justify-center items-center flex">
+        <p className="text-2xl md:text-2xl md:px-44 font-md tracking-wider max-w-6xl">
+          Read what people are saying about their new headshots.
+        </p>
+      </div>
+      <div className="flex gap-4 justify-center pt-8">
+        <Link href="/login">
+          <button
+            className="flex gap-3 items-center text-center bg-orange-700 hover:bg-orange-800 font-medium text-white px-6 py-2 rounded-lg text-lg 
+              transition transform motion-reduce:transition-none motion-reduce:hover:transform-none"
           >
-            Fully Customizable AI Headshots.
-          </div>
-          <div className="md:px-20 space-y-6 flex-col items-center justify-center">
-            <div className="text-lg pt-10 items-center flex gap-5">
-              <Image
-                src="/images/icon-store.png"
-                width={70}
-                height={70}
-                alt="feature-1"
-              />
-              <div className="flex flex-col gap-2">
-                Choose from a variety of AI generated headshots.
-              </div>
-            </div>
-
-            <div className="flex-col">
-              <div className="text-lg flex items-center gap-5">
-                <Image
-                  src="/images/icon-product.png"
-                  width={70}
-                  height={70}
-                  alt="feature-2"
-                />
-                <div>Customize your headshot with our AI editor.</div>
-              </div>
-            </div>
-
-            <div className="flex-col">
-              <div className="text-lg flex items-center gap-5">
-                <Image
-                  src="/images/icon-analytics.png"
-                  width={70}
-                  height={70}
-                  alt="feature-2"
-                />
-                <div>Gain valuable feedback by using our AI headshots.</div>
-              </div>
-            </div>
-
-            <div className="flex-col">
-              <div className="text-lg flex items-center gap-5">
-                <Image
-                  src="/images/icon-shield.png"
-                  width={70}
-                  height={70}
-                  alt="feature-2"
-                />
-                <div>Best in class AI to generate your AI headshots.</div>
-              </div>
-            </div>
-          </div>
-        </div>
+            Get Your Headshots
+            {<FaPaintBrush />}
+          </button>
+        </Link>
+      </div>
+      <div className="mt-[-70px]">
+        <Testimonial />
       </div>
     </div>
   );

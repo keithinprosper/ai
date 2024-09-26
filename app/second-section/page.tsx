@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import Showcase from "../showcase/page";
 import Carousal from "@/components/Carousal";
 
 const humans = [
@@ -233,6 +232,9 @@ const SecondSection = () => {
         <div className="animate-fadeIn container mx-auto pt-10">
           <Carousal images={humans} />
           <Carousal images={products} reverse={true} />
+        </div>
+        <div className="items-center justify-center flex text-sm font-md px-10 pb-20 uppercase tracking-wider text-slate-400">
+          Results from pixaify's ai generator.
         </div>
       </div>
     </div>

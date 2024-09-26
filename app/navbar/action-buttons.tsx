@@ -55,7 +55,7 @@ const ActionButtons = async () => {
               </Button>
             </Link> */}
             <Link href="/overview">
-              <Button className="text-md font-bold bg-orange-700 hover:bg-orange-800">
+              <Button className="text-md font-medium bg-orange-700 hover:bg-orange-800">
                 Get Started
               </Button>
             </Link>
