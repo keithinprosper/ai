@@ -54,7 +54,7 @@ const Pricing = () => {
           <div className="flex flex-col h-full w-full rounded-lg bg-white p-12">
             <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-orange-500 bg-white px-4 py-1 text-sm font-semibold shadow-md">
               <span className="text-gradient bg-gradient-to-l from-orange-700 to-red-400 bg-clip-text text-transparent">
-                82% pick this plan
+                90% pick this plan
               </span>
             </div>
             <div className="flex h-full flex-col">

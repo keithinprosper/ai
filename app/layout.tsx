@@ -18,7 +18,7 @@ export default function RootLayout({ children }: any) {
     <html lang="en">
       <body className="flex flex-col min-h-screen">
         <CustomCursor />
-        <NextTopLoader color="#2564eb" height={5} showSpinner={false} />
+        <NextTopLoader color="rgb(249 115 22)" height={5} showSpinner={false} />
         <Suspense
           fallback={
             <div className="flex w-full px-4 lg:px-40 py-4 items-center border-b text-center gap-8 justify-between h-[69px]" />

@@ -104,29 +104,30 @@ const FifthSection = () => {
         <div className="py-24 px-2 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="rounded-3xl p-8 lg:p-12 shadow-custom-shadow flex flex-col lg:flex-row items-center justify-between">
-              <div className="mb-12 lg:mb-0 lg:mr-12 lg:w-1/2">
-                <h2 className="text-4xl lg:text-5xl font-extrabold text-dark mb-6 leading-tight">
-                  Elevate Your{" "}
+              <div className="mb-12 lg:mb-0 lg:mr-12 lg:w-max">
+                <div className="text-7xl lg:text-7xl font-extrabold text-dark mb-6 leading-tight">
+                  Get{" "}
                   <span className="text-gradient bg-gradient-to-l from-orange-700 to-red-400 bg-clip-text text-transparent">
-                    Professional Image
+                    your AI{" "}
                   </span>
-                </h2>
-                <p className="text-xl mb-8">
-                  AI-powered headshots crafted for success in the modern
-                  business world
+                  headshots today.
+                </div>
+                <p className="text-xl mb-8 text-slate-700 font-medium tracking-wider">
+                  Stand out in every frame – personalized AI headshots for a
+                  picture perfect you.
                 </p>
                 <div className="flex items-center mb-10">
                   {/* Camera Icon with Orange Color */}
                   <Camera className="w-6 h-6 mr-3 text-orange-700" />
-                  <span className="text-md font-semibold text-black">
-                    Premium quality starting at just $4.99
+                  <span className="text-md font-medium text-slate-700 tracking-wider">
+                    Premium quality starting at just $24.99
                   </span>
                 </div>
                 <a
                   href="/login"
-                  className="inline-flex items-center justify-center text-orange-700 text-dark font-bold py-4 px-8 rounded-lg text-lg border-4 border-orange-700 shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="inline-flex items-center justify-center text-orange-700 text-dark font-bold py-4 px-8 rounded-xl text-lg border-2 border-orange-700 shadow-lg hover:shadow-xl transition-all duration-300 group"
                 >
-                  Get Your AI Headshot
+                  Get Your Headshots
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </a>
               </div>
@@ -135,25 +136,28 @@ const FifthSection = () => {
                   {/* Top image */}
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-40 rounded-full overflow-hidden border-4 border-orange-700 shadow-custom-shadow">
                     <img
-                      src="/content/headshot14.webp"
+                      src="/headshots/human5.jpg"
                       alt="AI Headshot Example 1"
                       className="object-cover w-full h-full"
+                      loading="lazy"
                     />
                   </div>
                   {/* Bottom left image */}
                   <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full overflow-hidden border-4 border-orange-700 shadow-custom-shadow">
                     <img
-                      src="/content/headshot15.webp"
+                      src="/headshots/human7.jpg"
                       alt="AI Headshot Example 2"
                       className="object-cover w-full h-full"
+                      loading="lazy"
                     />
                   </div>
                   {/* Bottom right image */}
-                  <div className="absolute bottom-0 right-0 w-40 h-40 rounded-full overflow-hidden border-4 border-orange-700 shadow-custom-shadow">
+                  <div className="absolute bottom-0 right-[-10px] w-40 h-40 rounded-full overflow-hidden border-4 border-orange-700 shadow-custom-shadow">
                     <img
-                      src="/content/headshot16.webp"
+                      src="/headshots/human8.jpeg"
                       alt="AI Headshot Example 3"
                       className="object-cover w-full h-full"
+                      loading="lazy"
                     />
                   </div>
                 </div>

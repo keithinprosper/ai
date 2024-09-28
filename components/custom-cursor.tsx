@@ -24,7 +24,7 @@ const CustomCursor = () => {
         position: "fixed",
         top: position.y,
         left: position.x,
-        transform: "translate(-50%, -50%)", // Center the arrow on the cursor
+        transform: "translate(-50%, -50%) scaleX(-1)", // Center and mirror the arrow on the cursor
         pointerEvents: "none", // Let clicks pass through the custom cursor
         zIndex: 10000, // Ensure the custom cursor is always on top
         color: "#fe7d00", // You can customize the color of the arrow
