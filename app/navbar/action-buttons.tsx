@@ -39,8 +39,10 @@ const ActionButtons = async () => {
                       <Link href="/">Home</Link>
                       {/* <Link href="/documentation/intro">Documentation</Link> */}
                       {/* <Link href="/showcase">Showcase</Link> */}
+                      <Link href="https://www.pixaify.com/#pricing">
+                        Pricing
+                      </Link>
                       <Link href="/refund">Refunds</Link>
-                      <Link href="/faqs">FAQs</Link>
                       <Link href="/overview">Sign in</Link>
                     </div>
                   </SheetDescription>

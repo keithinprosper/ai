@@ -91,4 +91,5 @@ code.text-\[\.9em\] {
 
 * {
   cursor: none !important;
+  scroll-behavior: smooth;
 }

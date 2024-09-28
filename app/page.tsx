@@ -9,7 +9,7 @@ import SecondSection from "./second-section/page";
 import ThirdSection from "./third-section/page";
 import FourthSection from "./fourth-section/page";
 import PricingSection from "./pricing/page";
-import FifthSection from "./fifth-section/page";
+import Faqs from "./faqs/page";
 
 export const dynamic = "force-dynamic";
 
@@ -33,7 +33,7 @@ export default async function Index() {
       <ThirdSection />
       <PricingSection />
       <FourthSection />
-      <FifthSection />
+      <Faqs />
     </div>
   );
 }

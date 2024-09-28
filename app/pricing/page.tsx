@@ -2,7 +2,10 @@ import Link from "next/link";
 
 const Pricing = () => {
   return (
-    <div className="flex flex-col items-center justify-center my-20">
+    <div
+      id="pricing"
+      className="flex flex-col items-center justify-center my-20"
+    >
       <h2
         className="px-4 sm:px-10 text-4xl sm:text-5xl md:text-7xl text-center font-bold pb-4 text-gradient bg-gradient-to-l
          from-orange-700 to-red-400

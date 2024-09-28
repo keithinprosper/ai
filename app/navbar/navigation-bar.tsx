@@ -29,21 +29,21 @@ export function NavigationMenuBar() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/refund" legacyBehavior passHref>
+          <Link href="https://www.pixaify.com/#pricing" legacyBehavior passHref>
             <NavigationMenuLink
               className={`${navigationMenuTriggerStyle()} font-medium`}
             >
-              Refunds
+              Pricing
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/faqs" legacyBehavior passHref>
+          <Link href="/refund" legacyBehavior passHref>
             <NavigationMenuLink
               className={`${navigationMenuTriggerStyle()} font-medium`}
             >
-              FAQs
+              Refunds
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
