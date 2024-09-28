@@ -204,7 +204,7 @@ const SecondSection = () => {
         {/* Video element */}
         <div className="flex justify-center items-center mt-8">
           <div
-            className="relative w-[80%] sm:w-[80%] xl:w-[1050px] border-orange-700 border-4 h-[200px] sm:h-[350px]
+            className="relative w-[95%] xl:w-[1050px] border-orange-700 border-4 h-[200px] sm:h-[350px]
             md:h-[400px] lg:h-[500px] xl:h-[600px] rounded-2xl overflow-hidden drop-shadow-lg"
           >
             <video
