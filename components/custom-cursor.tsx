@@ -4,6 +4,7 @@ import { TiLocationArrow } from "react-icons/ti";
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
 
   // Track mouse movement
   useEffect(() => {
@@ -17,6 +18,24 @@ const CustomCursor = () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
+  // Check if the device is mobile
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  if (isMobile) {
+    return null; // Do not render the custom cursor on mobile devices
+  }
 
   return (
     <div

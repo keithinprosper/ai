@@ -28,26 +28,6 @@ export function NavigationMenuBar() {
           </Link>
         </NavigationMenuItem>
 
-        {/* <NavigationMenuItem>
-          <Link href="/documentation/intro" legacyBehavior passHref>
-            <NavigationMenuLink
-              className={`${navigationMenuTriggerStyle()} font-medium`}
-            >
-              Documentation
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem> */}
-
-        {/* <NavigationMenuItem>
-          <Link href="/showcase" legacyBehavior passHref>
-            <NavigationMenuLink
-              className={`${navigationMenuTriggerStyle()} font-medium`}
-            >
-              Showcase
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem> */}
-
         <NavigationMenuItem>
           <Link href="/refund" legacyBehavior passHref>
             <NavigationMenuLink

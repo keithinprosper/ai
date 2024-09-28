@@ -1,59 +1,20 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { RiStarSFill } from "react-icons/ri";
 import Image from "next/image";
 
 const images = [
-  {
-    url: "/images/logo/logo-2.svg",
-    alt: "Logo",
-  },
-  {
-    url: "/images/logo/logo-3.svg",
-    alt: "Logo",
-  },
-
-  {
-    url: "/images/logo/logo-4.svg",
-    alt: "Logo",
-  },
-
-  {
-    url: "/images/logo/logo-7.svg",
-    alt: "Logo",
-  },
-
-  {
-    url: "/images/logo/logo-8.svg",
-    alt: "Logo",
-  },
-
-  {
-    url: "/images/logo/logo-9.svg",
-    alt: "Logo",
-  },
-
-  {
-    url: "/images/logo/logo-10.svg",
-    alt: "Logo",
-  },
-
-  {
-    url: "/images/logo/logo-11.svg",
-    alt: "Logo",
-  },
-
-  {
-    url: "/images/logo/logo-12.svg",
-    alt: "Logo",
-  },
-
-  {
-    url: "/images/logo/logo-13.svg",
-    alt: "Logo",
-  },
+  { url: "/images/logo/logo-2.svg", alt: "Logo" },
+  { url: "/images/logo/logo-3.svg", alt: "Logo" },
+  { url: "/images/logo/logo-4.svg", alt: "Logo" },
+  { url: "/images/logo/logo-7.svg", alt: "Logo" },
+  { url: "/images/logo/logo-8.svg", alt: "Logo" },
+  { url: "/images/logo/logo-9.svg", alt: "Logo" },
+  { url: "/images/logo/logo-10.svg", alt: "Logo" },
+  { url: "/images/logo/logo-11.svg", alt: "Logo" },
+  { url: "/images/logo/logo-12.svg", alt: "Logo" },
+  { url: "/images/logo/logo-13.svg", alt: "Logo" },
 ];
 
 const Carousel = () => {
@@ -72,18 +33,16 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="mt-[-70px]">
+    <div className="md:mt-[-70px] md:mb-0 mb-10">
       <div className="flex items-center justify-center pb-4">
-        <RiStarSFill size={20} color="#c2410c" />
-        <RiStarSFill size={20} color="#c2410c" />
-        <RiStarSFill size={20} color="#c2410c" />
-        <RiStarSFill size={20} color="#c2410c" />
-        <RiStarSFill size={20} color="#c2410c" />
+        {[...Array(5)].map((_, index) => (
+          <RiStarSFill key={index} size={20} color="#c2410c" />
+        ))}
       </div>
-      <div className="items-center justify-center flex text-md font-md px-10 uppercase tracking-wider text-slate-400">
+      <div className="text-center text-md font-medium px-4 md:px-10 uppercase tracking-wider text-slate-400">
         Trusted by leading brands & professionals.
       </div>
-      <div className="grid grid-cols-3 px-52 mt-[-2rem] md:flex">
+      <div className="flex flex-wrap md:flex-nowrap justify-center items-center mt-4 md:mt-[-2rem] px-4 md:px-8 lg:px-52">
         <AnimatePresence custom={currentImageIndex}>
           {images.map((image, index) => (
             <motion.div
@@ -94,7 +53,7 @@ const Carousel = () => {
                 scale: index === currentImageIndex ? 1.2 : 1,
                 transition: { duration: 0.1 },
               }}
-              className="flex justify-center items-center h-40 w-40"
+              className="flex justify-center items-center h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40"
               exit={{ opacity: 0 }}
               custom={index}
               transition={{
@@ -106,7 +65,7 @@ const Carousel = () => {
                 alt={image.alt}
                 width={200}
                 height={200}
-                className="object-contain h-20 w-20 items-center flex mx-auto"
+                className="object-contain h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24"
               />
             </motion.div>
           ))}

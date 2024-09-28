@@ -37,8 +37,9 @@ const ActionButtons = async () => {
                   <SheetDescription>
                     <div className="flex flex-col space-y-4 items-start w-full text-lg text-black mt-10">
                       <Link href="/">Home</Link>
-                      <Link href="/documentation/intro">Documentation</Link>
-                      <Link href="/showcase">Showcase</Link>
+                      {/* <Link href="/documentation/intro">Documentation</Link> */}
+                      {/* <Link href="/showcase">Showcase</Link> */}
+                      <Link href="/refund">Refunds</Link>
                       <Link href="/faqs">FAQs</Link>
                       <Link href="/overview">Sign in</Link>
                     </div>

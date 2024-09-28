@@ -3,20 +3,24 @@ import Link from "next/link";
 const Pricing = () => {
   return (
     <div className="flex flex-col items-center justify-center my-20">
-      <div
-        className="text-7xl text-center font-bold pb-4 text-gradient bg-gradient-to-l from-orange-700 to-red-400
+      <h2
+        className="px-4 sm:px-10 text-4xl sm:text-5xl md:text-7xl text-center font-bold pb-4 text-gradient bg-gradient-to-l
+         from-orange-700 to-red-400
         max-w-4xl bg-clip-text text-transparent"
       >
         Premium quality without the premium price.
-      </div>
-      <div className="text-center text-xl font-medium text-slate-700 px-10 mt-4 max-w-4xl tracking-wider">
+      </h2>
+      <p
+        className="px-4 text-center text-xl sm:text-2xl font-medium text-slate-700 mt-4 max-w-4xl 
+      tracking-wider"
+      >
         Update your LinkedIn profile picture, boost your job application rate,
         or upgrade your company's website with our tailored AI headshot plans.
-      </div>
+      </p>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-4 lg:gap-6 mt-16 mb-12">
         {/* Starter Plan */}
-        <div className="relative mx-auto h-full w-full max-w-lg rounded-lg border bg-white p-12 border-black/[0.08]">
+        <div className="relative mx-auto w-[95%] sm:h-full sm:w-full max-w-lg rounded-lg border bg-white p-12 border-black/[0.08]">
           <div className="flex h-full flex-col px-6">
             <div className="uppercase text-center tracking-wider mb-1 text-base text-black/50">
               Starter
@@ -50,7 +54,7 @@ const Pricing = () => {
         </div>
 
         {/* Basic Plan */}
-        <div className="relative mx-auto h-full w-full max-w-lg rounded-lg p-[2px] bg-gradient-to-l from-orange-700 to-red-400">
+        <div className="relative mx-auto w-[95%] sm:h-full sm:w-full max-w-lg rounded-lg p-[2px] bg-gradient-to-l from-orange-700 to-red-400">
           <div className="flex flex-col h-full w-full rounded-lg bg-white p-12">
             <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-orange-500 bg-white px-4 py-1 text-sm font-semibold shadow-md">
               <span className="text-gradient bg-gradient-to-l from-orange-700 to-red-400 bg-clip-text text-transparent">
@@ -95,7 +99,7 @@ const Pricing = () => {
         </div>
 
         {/* Premium Plan */}
-        <div className="relative mx-auto h-full w-full max-w-lg rounded-lg border bg-white p-12 border-black/[0.08]">
+        <div className="relative mx-auto w-[95%] sm:h-full sm:w-full max-w-lg rounded-lg border bg-white p-12 border-black/[0.08]">
           <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full border bg-white px-4 py-1 text-sm shadow-md font-semibold border-black/[0.08]">
             <span className="text-[#ee3f87]">Best Value</span>
           </div>

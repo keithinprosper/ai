@@ -30,6 +30,7 @@ const SecondSection = () => {
   return (
     <div>
       <div className="flex flex-col justify-center items-center">
+        {/* First section */}
         {/* Circle element */}
         <div className="relative flex flex-col items-center">
           {/* Circle with gradient and number */}
@@ -40,72 +41,75 @@ const SecondSection = () => {
           <div className="w-1 h-10 rounded-lg bg-gradient-to-b from-orange-600 to-transparent mt-[-2px]"></div>
         </div>
         {/* Text element */}
-        <div className="text-6xl font-bold text-center mt-2">
+        <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mt-2">
           Upload your photos
         </div>
-        <div className="items-center justify-center flex text-xl font-md px-10 tracking-wider text-slate-700 mt-4 max-w-4xl text-center">
+        <div
+          className="items-center justify-center flex text-lg md:text-xl font-md px-10 tracking-wider text-slate-700 mt-4 
+        max-w-4xl text-center"
+        >
           Submit 4 or more high-quality selfies. Ensure they are front-facing,
           with only one person, no hats or accessories.
         </div>
         {/* Graphic element */}
-        <div className="flex justify-center items-center mt-8">
-          <div className="flex flex-col items-center">
+        <div className="px-2 min-w-fit flex justify-center items-center mt-8">
+          <div className="flex flex-row items-center">
             {/* Row with images on left, center, and right */}
             <div className="flex justify-between w-full max-w-7xl">
               {/* Left side */}
               <div className="flex flex-col items-center justify-center">
-                <div className="flex gap-6 mb-1">
+                <div className="hidden sm:flex-col lg:flex-row sm:flex gap-6 mb-1">
                   {/* Three images up */}
                   <Image
                     src="/avatars/7.png"
                     width={105}
                     height={105}
-                    className="rounded-2xl drop-shadow-lg"
+                    className="rounded-2xl shadow-custom-shadow"
                     alt="image 1"
                   />
                   <Image
                     src="/avatars/1.png"
                     width={105}
                     height={105}
-                    className="rounded-2xl drop-shadow-lg"
+                    className="rounded-2xl shadow-custom-shadow"
                     alt="image 2"
                   />
                   <Image
                     src="/avatars/8.png"
                     width={105}
                     height={105}
-                    className="rounded-2xl drop-shadow-lg"
+                    className="rounded-2xl shadow-custom-shadow"
                     alt="image 3"
                   />
                 </div>
-                <div className="flex gap-6 mt-6">
+                <div className="hidden lg:flex gap-6 mt-6">
                   {/* Three images down */}
                   <Image
                     src="/avatars/4.png"
                     width={105}
                     height={105}
-                    className="rounded-2xl drop-shadow-lg"
+                    className="rounded-2xl shadow-custom-shadow"
                     alt="image 4"
                   />
                   <Image
                     src="/avatars/9.png"
                     width={105}
                     height={105}
-                    className="rounded-2xl drop-shadow-lg"
+                    className="rounded-2xl shadow-custom-shadow"
                     alt="image 5"
                   />
                   <Image
                     src="/avatars/3.png"
                     width={105}
                     height={105}
-                    className="rounded-2xl drop-shadow-lg"
+                    className="rounded-2xl shadow-custom-shadow"
                     alt="image 6"
                   />
                 </div>
               </div>
 
               {/* Center image */}
-              <div className="relative mx-8 w-[220px] h-[480px]">
+              <div className="relative mx-8 w-[250px] h-[480px]">
                 {/* Image */}
                 <Image
                   src="/avatars/phone.svg"
@@ -122,57 +126,57 @@ const SecondSection = () => {
                   autoPlay
                   loop
                   muted
-                  className="absolute top-6 left-1/2 transform -translate-x-1/2 w-[200px] h-[430px] rounded-3xl"
+                  className="absolute top-6 left-1/2 transform -translate-x-1/2 -translate-y-3 w-[212px] rounded-3xl"
                 />
               </div>
 
               {/* Right side */}
               <div className="flex flex-col items-center justify-center">
-                <div className="flex gap-6 mb-1">
+                <div className="hidden lg:flex gap-6 mb-1">
                   {/* Three images up */}
                   <Image
                     src="/avatars/5.png"
                     width={105}
                     height={105}
-                    className="rounded-2xl drop-shadow-lg"
+                    className="rounded-2xl shadow-custom-shadow"
                     alt="image 7"
                   />
                   <Image
                     src="/avatars/10.png"
                     width={105}
                     height={105}
-                    className="rounded-2xl drop-shadow-lg"
+                    className="rounded-2xl shadow-custom-shadow"
                     alt="image 8"
                   />
                   <Image
                     src="/avatars/6.png"
                     width={105}
                     height={105}
-                    className="rounded-2xl drop-shadow-lg bg-white "
+                    className="rounded-2xl shadow-custom-shadow"
                     alt="image 9"
                   />
                 </div>
-                <div className="flex gap-6 mt-6">
+                <div className="hidden sm:flex-col lg:flex-row sm:flex flex-col gap-6 lg:mt-6">
                   {/* Three images down */}
                   <Image
                     src="/avatars/12.png"
                     width={105}
                     height={105}
-                    className="rounded-2xl drop-shadow-lg"
+                    className="rounded-2xl shadow-custom-shadow"
                     alt="image 10"
                   />
                   <Image
                     src="/avatars/2.png"
                     width={105}
                     height={105}
-                    className="rounded-2xl drop-shadow-lg"
+                    className="rounded-2xl shadow-custom-shadow"
                     alt="image 11"
                   />
                   <Image
                     src="/avatars/11.png"
                     width={105}
                     height={105}
-                    className="rounded-2xl drop-shadow-lg"
+                    className="rounded-2xl shadow-custom-shadow"
                     alt="image 12"
                   />
                 </div>
@@ -180,6 +184,7 @@ const SecondSection = () => {
             </div>
           </div>
         </div>
+        {/* Second section */}
         {/* Circle element */}
         <div className="relative flex flex-col items-center mt-8">
           {/* Circle with gradient and number */}
@@ -190,16 +195,18 @@ const SecondSection = () => {
           <div className="mt-[-75px] w-1 h-28 rounded-lg bg-gradient-to-b from-transparent via-[#ff6856] to-transparent bg-[length:100%_100%]"></div>
         </div>
         {/* Text element */}
-        <div className="text-6xl font-bold text-center mt-2">
+        <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mt-2">
           Our AI gets to work
         </div>
-        <div className="items-center justify-center flex text-xl font-md px-10 tracking-wider text-slate-700 mt-4 max-w-4xl text-center">
+        <div className="items-center justify-center flex text-lg md:text-xl font-md px-10 tracking-wider text-slate-700 mt-4 max-w-4xl text-center">
           The AI magic takes ~20 minutes. You'll get an email when it's ready.
         </div>
-
         {/* Video element */}
         <div className="flex justify-center items-center mt-8">
-          <div className="relative w-[1050px] border-orange-700 border-4 h-[600px] rounded-2xl overflow-hidden drop-shadow-lg">
+          <div
+            className="relative w-[80%] sm:w-[80%] xl:w-[1050px] border-orange-700 border-4 h-[200px] sm:h-[350px]
+            md:h-[400px] lg:h-[500px] xl:h-[600px] rounded-2xl overflow-hidden drop-shadow-lg"
+          >
             <video
               src="/avatars/showcase.mp4"
               autoPlay
@@ -209,7 +216,7 @@ const SecondSection = () => {
             />
           </div>
         </div>
-
+        {/* Third section */}
         {/* Circle element */}
         <div className="relative flex flex-col items-center mt-16">
           {/* Circle with gradient and number */}
@@ -219,16 +226,14 @@ const SecondSection = () => {
           {/* Gradient stroke line with fade out at the end */}
           <div className="mt-[-90px] w-1 h-14 rounded-lg bg-gradient-to-b from-transparent to-black"></div>
         </div>
-
         {/* Text element */}
-        <div className="text-6xl font-bold text-center mt-10">
+        <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mt-10">
           Get amazing headshots
         </div>
-        <div className="items-center justify-center flex text-xl font-md px-10 tracking-wider text-slate-700 mt-4 max-w-4xl text-center">
+        <div className="items-center justify-center flex text-lg md:text-xl font-md px-10 tracking-wider text-slate-700 mt-4 max-w-4xl text-center">
           You'll receive multiple AI headshots, ready for all use cases — from
           personal to professional — depending on the style you choose.
         </div>
-
         <div className="animate-fadeIn container mx-auto pt-10">
           <Carousal images={humans} />
           <Carousal images={products} reverse={true} />

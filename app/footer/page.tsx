@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="bg-orange-100 text-slate-700 py-10 mt-10">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Logo and Description */}
         <div className="flex flex-col items-center md:items-start">
           <div className="footer-logo flex items-center justify-center my-[-60px] ml-[-20px] ">
@@ -12,7 +12,7 @@ const Footer = () => {
             />
           </div>
 
-          <p className="text-slate-700 text-sm text-justify mb-6">
+          <p className="text-slate-700 text-sm text-justify mb-6 px-4 md:px-0">
             Create professional, high-quality AI-generated headshots in minutes
             with Pixaify, our easy-to-use AI headshot generator. Perfect for
             businesses and individuals looking to elevate their profile with
@@ -107,7 +107,7 @@ const Footer = () => {
           <h3 className="text-slate-900 font-semibold tracking-wider mb-4">
             FOLLOW US
           </h3>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 justify-start md:justify-start">
             <a
               href=""
               aria-label="Facebook"
@@ -158,7 +158,7 @@ const Footer = () => {
         className="mt-12 border-t border-slate-700 pt-6 text-center mx-auto"
         style={{ width: "50%" }}
       >
-        <p className="text-slate-700">
+        <p className="text-slate-700 text-xs sm:text-base">
           © {new Date().getFullYear()} Pixaify. All rights reserved.
         </p>
       </div>
