@@ -14,33 +14,47 @@ const Footer = () => {
 
           <p className="text-slate-700 text-sm text-justify mb-6">
             Create professional, high-quality AI-generated headshots in minutes
-            with Unrealshot AI, our easy-to-use AI headshot generator. Perfect
-            for businesses and individuals looking to elevate their profile with
+            with Pixaify, our easy-to-use AI headshot generator. Perfect for
+            businesses and individuals looking to elevate their profile with
             stunning, custom portraits.
           </p>
         </div>
 
         {/* Links */}
         <div>
-          <h3 className="text-slate-900 font-semibold mb-4">Pages</h3>
+          <h3 className="text-slate-900 font-semibold tracking-wider mb-4">
+            PAGES
+          </h3>
           <ul className="space-y-2">
             <li>
-              <a href="/about" className="hover:text-slate-900 transition">
+              <a
+                href="/about"
+                className="hover:text-slate-900 hover:underline transition"
+              >
                 About Us
               </a>
             </li>
             <li>
-              <a href="/pricing" className="hover:text-slate-900 transition">
+              <a
+                href="/pricing"
+                className="hover:text-slate-900 hover:underline transition"
+              >
                 Pricing
               </a>
             </li>
             <li>
-              <a href="/blog" className="hover:text-slate-900 transition">
+              <a
+                href="/blog"
+                className="hover:text-slate-900 hover:underline transition"
+              >
                 Blog
               </a>
             </li>
             <li>
-              <a href="/contact-us" className="hover:text-slate-900 transition">
+              <a
+                href="/contact-us"
+                className="hover:text-slate-900 hover:underline transition"
+              >
                 Contact Us
               </a>
             </li>
@@ -49,31 +63,38 @@ const Footer = () => {
 
         {/* Legal Links */}
         <div>
-          <h3 className="text-slate-900 font-semibold mb-4">Legal</h3>
+          <h3 className="text-slate-900 font-semibold tracking-wider mb-4">
+            LEGAL
+          </h3>
           <ul className="space-y-2">
             <li>
-              <a href="/faqs" className="hover:text-slate-900 transition">
+              <a
+                href="/faqs"
+                className="hover:text-slate-900 hover:underline transition"
+              >
                 FAQs
               </a>
             </li>
             <li>
-              <a href="/terms" className="hover:text-slate-900 transition">
+              <a
+                href="/terms"
+                className="hover:text-slate-900 hover:underline transition"
+              >
                 Terms
               </a>
             </li>
             <li>
               <a
                 href="/refund-policy"
-                className="hover:text-slate-900 transition"
+                className="hover:text-slate-900 hover:underline transition"
               >
                 Refunds
               </a>
             </li>
-
             <li>
               <a
                 href="/privacy-policy"
-                className="hover:text-slate-900 transition"
+                className="hover:text-slate-900 hover:underline transition"
               >
                 Privacy Policy
               </a>
@@ -83,10 +104,12 @@ const Footer = () => {
 
         {/* Social Links */}
         <div>
-          <h3 className="text-slate-900 font-semibold mb-4">Follow Us</h3>
+          <h3 className="text-slate-900 font-semibold tracking-wider mb-4">
+            FOLLOW US
+          </h3>
           <div className="flex space-x-4">
             <a
-              href="https://www.facebook.com/profile.php?id=61565396552674"
+              href=""
               aria-label="Facebook"
               className="hover:text-blue-500 transition"
             >
@@ -100,7 +123,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://x.com/UnrealshotAI"
+              href=""
               aria-label="Twitter"
               className="hover:text-blue-400 transition"
             >
@@ -114,9 +137,9 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://www.instagram.com/UnrealshotAI/"
+              href=""
               aria-label="Instagram"
-              className="hover:text-indigo-600 transition"
+              className="hover:text-pink-400 transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +155,7 @@ const Footer = () => {
       </div>
       {/* Copyright Section */}
       <div
-        className="mt-12 border-t border-slate-500 pt-6 text-center mx-auto"
+        className="mt-12 border-t border-slate-700 pt-6 text-center mx-auto"
         style={{ width: "50%" }}
       >
         <p className="text-slate-700">
