@@ -70,7 +70,12 @@ export default function ClientSideModelsList({
             <div className="flex gap-2">
               <ClearModels onClear={handleDeleteModels} />
               <Link href="/overview/models/train" className="w-fit">
-                <Button size={"sm"}>Train model</Button>
+                <Button
+                  size={"sm"}
+                  className="bg-orange-600 hover:bg-orange-700"
+                >
+                  Train model
+                </Button>
               </Link>
             </div>
           </div>
