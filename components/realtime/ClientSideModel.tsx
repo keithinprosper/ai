@@ -47,22 +47,23 @@ export default function ClientSideModel({
 
   const handleDownload = async (imageUrl: string, fileName: string) => {
     try {
-      const response = await fetch(imageUrl);
+      const response = await fetch(imageUrl, {
+        mode: "no-cors", // Bypass CORS policy
+      });
 
       if (!response.ok) throw new Error("Failed to fetch image");
 
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
+      // Since we're using `no-cors`, we don't have access to the response body,
+      // so we create an <a> element that points directly to the image URL.
       const a = document.createElement("a");
       a.style.display = "none";
-      a.href = url;
+      a.href = imageUrl; // Directly use the image URL
       a.download = fileName;
       document.body.appendChild(a);
       a.click();
-      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a); // Clean up after download
     } catch (error) {
       console.error("Error downloading the image:", error);
-      // Optionally show an error message to the user here
     }
   };
 

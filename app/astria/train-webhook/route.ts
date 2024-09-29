@@ -138,8 +138,6 @@ export async function POST(request: Request) {
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="x-apple-disable-message-reformatting" />
-    <meta name="color-scheme" content="light">
-    <meta name="supported-color-schemes" content="light">
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!--<![endif]-->
@@ -215,7 +213,7 @@ export async function POST(request: Request) {
         color: #000000;
       }
       #u_body a {
-        color: #0000ee;
+        color: #f97316;
         text-decoration: underline;
       }
       @media (max-width: 480px) {
@@ -240,6 +238,11 @@ export async function POST(request: Request) {
       rel="stylesheet"
       type="text/css"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!--<![endif]-->
   </head>
 
@@ -249,8 +252,8 @@ export async function POST(request: Request) {
       margin: 0;
       padding: 0;
       -webkit-text-size-adjust: 100%;
-      background-color: #c2e0f4;
-      color: #000000;
+      background-color: #fed7aa !important;
+      color: #000000 !important;
     "
   >
     <!--[if IE]><div class="ie-container"><![endif]-->
@@ -266,7 +269,7 @@ export async function POST(request: Request) {
         vertical-align: top;
         min-width: 320px;
         margin: 0 auto;
-        background-color: #c2e0f4;
+        background-color: #fed7aa !important;
         width: 100%;
       "
       cellpadding="0"
@@ -281,11 +284,11 @@ export async function POST(request: Request) {
               vertical-align: top;
             "
           >
-            <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #c2e0f4;"><![endif]-->
+            <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #fed7aa;"><![endif]-->
 
             <div
               class="u-row-container"
-              style="padding: 0px; background-color: transparent"
+              style="padding: 0px; background-color: #fed7aa !important"
             >
               <div
                 class="u-row"
@@ -305,7 +308,7 @@ export async function POST(request: Request) {
                     display: table;
                     width: 100%;
                     height: 100%;
-                    background-color: transparent;
+                    background-color: white;
                   "
                 >
                   <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
@@ -366,7 +369,7 @@ export async function POST(request: Request) {
                                     mso-table-lspace: 0pt;
                                     mso-table-rspace: 0pt;
                                     vertical-align: top;
-                                    border-top: 6px solid #6f9de1;
+                                    border-top: 6px solid #ff8020;
                                     -ms-text-size-adjust: 100%;
                                     -webkit-text-size-adjust: 100%;
                                   "
@@ -433,7 +436,7 @@ export async function POST(request: Request) {
                                       <img
                                         align="center"
                                         border="0"
-                                        src="https://raw.githubusercontent.com/Sharjeel-Riaz/SaaS-Assets/main/framecast-ai/email/image-3.jpg"
+                                        src="https://raw.githubusercontent.com/keithinprosper/assets/refs/heads/main/logo.jpeg"
                                         alt="Logo"
                                         title="Logo"
                                         style="
@@ -472,7 +475,7 @@ export async function POST(request: Request) {
 
             <div
               class="u-row-container"
-              style="padding: 0px; background-color: transparent"
+              style="padding: 0px; background-color: #fed7aa !important"
             >
               <div
                 class="u-row"
@@ -492,7 +495,102 @@ export async function POST(request: Request) {
                     display: table;
                     width: 100%;
                     height: 100%;
-                    background-color: transparent;
+                    background-color: white;
+                  "
+                >
+                  <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
+
+                  <!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-100"
+                    style="
+                      max-width: 320px;
+                      min-width: 600px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          style="font-family: arial, helvetica, sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 10px;
+                                  font-family: arial, helvetica, sans-serif;
+                                "
+                                align="left"
+                              ></td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="u-row-container"
+              style="padding: 0px; background-color: #fed7aa !important"
+            >
+              <div
+                class="u-row"
+                style="
+                  margin: 0 auto;
+                  min-width: 320px;
+                  max-width: 600px;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-word;
+                  background-color: #ffffff;
+                "
+              >
+                <div
+                  style="
+                    border-collapse: collapse;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    background-color: white;
                   "
                 >
                   <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
@@ -588,13 +686,13 @@ export async function POST(request: Request) {
                                         font-size: 16px;
                                         line-height: 28.8px;
                                       "
-                                      >We're writing to notify you that your
-                                      model training has been successful.
-                                      <em><strong>1 credit </strong></em
-                                      >has been used from your account. Refresh
-                                      the dashboard page to see the updated
-                                      results!</span
                                     >
+                                      We're writing to notify you that your
+                                      model training has been successful. 1
+                                      credit has been used from your account.
+                                      Refresh the dashboard page to see the
+                                      updated results!
+                                    </span>
                                   </p>
                                 </div>
                               </td>
@@ -632,6 +730,9 @@ export async function POST(request: Request) {
                                   "
                                 >
                                   <p style="font-size: 14px; line-height: 170%">
+                                     
+                                  </p>
+                                  <p style="font-size: 14px; line-height: 170%">
                                     <span
                                       style="
                                         font-family: Lato, sans-serif;
@@ -654,25 +755,7 @@ export async function POST(request: Request) {
                                             font-size: 16px;
                                             line-height: 27.2px;
                                           "
-                                          >Jerry,</span
-                                        ></strong
-                                      ></span
-                                    >
-                                  </p>
-                                  <p style="font-size: 14px; line-height: 170%">
-                                    <span
-                                      style="
-                                        font-family: Lato, sans-serif;
-                                        font-size: 14px;
-                                        line-height: 23.8px;
-                                      "
-                                      ><strong
-                                        ><span
-                                          style="
-                                            font-size: 16px;
-                                            line-height: 27.2px;
-                                          "
-                                          >Founder, Jerrizz</span
+                                          >Keith</span
                                         ></strong
                                       ></span
                                     >
@@ -696,7 +779,11 @@ export async function POST(request: Request) {
 
             <div
               class="u-row-container"
-              style="padding: 0px; background-color: transparent"
+              style="
+                padding: 0px;
+                background-color: #fed7aa !important;
+                background: linear-gradient(#fed7aa, #fed7aa);
+              "
             >
               <div
                 class="u-row"
@@ -707,7 +794,7 @@ export async function POST(request: Request) {
                   overflow-wrap: break-word;
                   word-wrap: break-word;
                   word-break: break-word;
-                  background-color: #080f30;
+                  background-color: #5e3105;
                 "
               >
                 <div
@@ -716,7 +803,7 @@ export async function POST(request: Request) {
                     display: table;
                     width: 100%;
                     height: 100%;
-                    background-color: transparent;
+                    background-color: #301f08;
                   "
                 >
                   <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #080f30;"><![endif]-->
@@ -773,8 +860,7 @@ export async function POST(request: Request) {
                                   font-family: arial, helvetica, sans-serif;
                                 "
                                 align="left"
-                              >
-                              </td>
+                              ></td>
                             </tr>
                           </tbody>
                         </table>
@@ -816,7 +902,7 @@ export async function POST(request: Request) {
                                         line-height: 29.4px;
                                       "
                                       >You're receiving this email because you
-                                      have registered it on Framecast AI.</span
+                                      have registered it on Pixaify.</span
                                     >
                                   </p>
                                   <p style="font-size: 14px; line-height: 210%">
@@ -825,9 +911,9 @@ export async function POST(request: Request) {
                                         font-family: Lato, sans-serif;
                                         font-size: 14px;
                                         line-height: 29.4px;
+                                        color: white;
                                       "
-                                      >©2024 Jerrizz | Texas, United
-                                      States</span
+                                      >© 2024 Pixaify | United States</span
                                     >
                                   </p>
                                 </div>
