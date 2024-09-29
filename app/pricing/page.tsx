@@ -40,7 +40,7 @@ const Pricing = () => {
                 ⏱️ <b>2</b>-hour processing time
               </li>
               <li className="text-black/70">
-                👕 <b>5</b> outfits and backgrounds
+                👕 <b>Corporate</b> outfits and backgrounds
               </li>
               <li className="text-black/70">
                 🕺 <b>1</b> credit
@@ -84,7 +84,7 @@ const Pricing = () => {
                   ⏱️ <b>1</b>-hour processing time
                 </li>
                 <li className="text-black/70">
-                  👕 <b>20</b> outfits and backgrounds
+                  👕 <b>Corporate</b> outfits and backgrounds
                 </li>
                 <li className="text-black/70">
                   🕺 <b>3</b> credits
@@ -122,7 +122,7 @@ const Pricing = () => {
                 ⏱️ <b>30</b>-min processing time
               </li>
               <li className="text-black/70">
-                👕 <b>40</b> outfits and backgrounds
+                👕 <b>Corporate</b> outfits and backgrounds
               </li>
               <li className="text-black/70">
                 🕺 <b>5</b> credits

@@ -137,7 +137,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href=""
+              href="https://www.instagram.com/pixaify/"
               aria-label="Instagram"
               className="hover:text-pink-400 transition"
             >

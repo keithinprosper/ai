@@ -10,6 +10,7 @@ import ThirdSection from "./third-section/page";
 import FourthSection from "./fourth-section/page";
 import PricingSection from "./pricing/page";
 import Faqs from "./faqs/page";
+import StripePricingTable from "@/components/stripe/StripeTable";
 
 export const dynamic = "force-dynamic";
 
