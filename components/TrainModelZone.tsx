@@ -232,7 +232,7 @@ export default function TrainModelZone() {
                 />
                 <Label
                   htmlFor="man"
-                  className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+                  className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-orange-500 [&:has([data-state=checked])]:border-orange-500"
                 >
                   <FaMale className="mb-3 h-6 w-6" />
                   Man
@@ -248,7 +248,7 @@ export default function TrainModelZone() {
                 />
                 <Label
                   htmlFor="woman"
-                  className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+                  className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-orange-500 [&:has([data-state=checked])]:border-orange-500"
                 >
                   <FaFemale className="mb-3 h-6 w-6" />
                   Woman
@@ -263,7 +263,7 @@ export default function TrainModelZone() {
                 />
                 <Label
                   htmlFor="person"
-                  className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+                  className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-orange-500 [&:has([data-state=checked])]:border-orange-500"
                 >
                   <FaRainbow className="mb-3 h-6 w-6" />
                   Unisex
@@ -280,7 +280,7 @@ export default function TrainModelZone() {
               Upload 4-10 images of the person you want to generate headshots
               for.
             </FormDescription>
-            <div className="outline-dashed outline-2 outline-gray-100 hover:outline-blue-500 w-full h-full rounded-md p-4 flex justify-center align-middle">
+            <div className="outline-dashed outline-2 outline-gray-100 hover:outline-orange-500 w-full h-full rounded-md p-4 flex justify-center align-middle">
               <input {...getInputProps()} />
               {isDragActive ? (
                 <p className="self-center">Drop the files here ...</p>
@@ -315,7 +315,11 @@ export default function TrainModelZone() {
             </div>
           )}
 
-          <Button type="submit" className="w-full" isLoading={isLoading}>
+          <Button
+            type="submit"
+            className="w-full bg-orange-600 hover:bg-orange-700"
+            isLoading={isLoading}
+          >
             Train Model{" "}
             {stripeIsConfigured && <span className="ml-1">(1 Credit)</span>}
           </Button>

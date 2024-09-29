@@ -110,7 +110,7 @@ export const Login = ({
               Don't have an account yet?{" "}
               <a
                 href="#"
-                className="text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"
+                className="text-orange-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-orange-500"
               >
                 Sign up below!
               </a>
@@ -133,7 +133,7 @@ export const Login = ({
                   <Input
                     type="email"
                     placeholder="Email"
-                    className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                    className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-orange-500 focus:ring-orange-500 focus:outline-none disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
                     {...register("email", {
                       required: true,
                       validate: {
@@ -164,8 +164,8 @@ export const Login = ({
                 disabled={isSubmitting}
                 variant="outline"
                 className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium 
-                rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 hover:text-white 
-                focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                rounded-lg border border-transparent bg-orange-600 text-white hover:bg-orange-700 hover:text-white 
+                focus:outline-none focus:bg-orange-700 disabled:opacity-50 disabled:pointer-events-none"
                 type="submit"
               >
                 Continue with Email
@@ -176,15 +176,15 @@ export const Login = ({
               <p className="text-sm text-gray-600 dark:text-neutral-400">
                 By signing up, you agree to our{" "}
                 <a
-                  href="#"
-                  className="underline text-blue-600 dark:text-blue-500"
+                  href="/terms"
+                  className="underline text-orange-600 dark:text-orange-500"
                 >
                   Terms of Service
                 </a>{" "}
                 and{" "}
                 <a
-                  href="#"
-                  className="underline text-blue-600 dark:text-blue-500"
+                  href="/privacy-policy"
+                  className="underline text-orange-600 dark:text-orange-500"
                 >
                   Privacy Policy
                 </a>

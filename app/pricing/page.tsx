@@ -29,8 +29,8 @@ const Pricing = () => {
               Starter
             </div>
             <div className="flex flex-col text-center text-[4rem] font-extrabold leading-none tracking-tight lg:text-[4.5rem]">
-              <span className="line-through text-[2.5rem] opacity-20">$59</span>
-              <span className="mt-1">$35</span>
+              <span className="line-through text-[2.5rem] opacity-20">$39</span>
+              <span className="mt-1">$12</span>
             </div>
             <ul className="flex-grow flex flex-col gap-3 pt-9 pb-10">
               <li className="text-black/70">
@@ -43,7 +43,7 @@ const Pricing = () => {
                 👕 <b>5</b> outfits and backgrounds
               </li>
               <li className="text-black/70">
-                🕺 <b>5</b> poses
+                🕺 <b>1</b> credit
               </li>
             </ul>
             <div className="flex justify-center">
@@ -70,10 +70,10 @@ const Pricing = () => {
               </div>
               <div className="flex flex-col text-center text-[4rem] font-extrabold leading-none tracking-tight lg:text-[4.5rem]">
                 <span className="line-through text-[2.5rem] opacity-20">
-                  $79
+                  $59
                 </span>
                 <span className="mt-1 text-gradient bg-gradient-to-l from-orange-700 to-red-400 bg-clip-text text-transparent">
-                  $45
+                  $30
                 </span>
               </div>
               <ul className="flex-grow flex flex-col gap-3 pt-9 pb-10">
@@ -87,7 +87,7 @@ const Pricing = () => {
                   👕 <b>20</b> outfits and backgrounds
                 </li>
                 <li className="text-black/70">
-                  🕺 <b>20</b> poses
+                  🕺 <b>3</b> credits
                 </li>
               </ul>
               <div className="flex justify-center">
@@ -111,10 +111,8 @@ const Pricing = () => {
               Premium
             </div>
             <div className="flex flex-col text-center text-[4rem] font-extrabold leading-none tracking-tight lg:text-[4.5rem]">
-              <span className="line-through text-[2.5rem] opacity-20">
-                $129
-              </span>
-              <span className="mt-1">$75</span>
+              <span className="line-through text-[2.5rem] opacity-20">$99</span>
+              <span className="mt-1">$40</span>
             </div>
             <ul className="flex-grow flex flex-col gap-3 pt-9 pb-10">
               <li className="text-black/70">
@@ -127,7 +125,7 @@ const Pricing = () => {
                 👕 <b>40</b> outfits and backgrounds
               </li>
               <li className="text-black/70">
-                🕺 <b>40</b> poses
+                🕺 <b>5</b> credits
               </li>
             </ul>
             <div className="flex justify-center">

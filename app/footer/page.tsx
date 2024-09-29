@@ -109,7 +109,7 @@ const Footer = () => {
           </h3>
           <div className="flex space-x-4 justify-start md:justify-start">
             <a
-              href=""
+              href="https://www.facebook.com/people/Pixaifycom/61566084225841/"
               aria-label="Facebook"
               className="hover:text-blue-500 transition"
             >
@@ -123,8 +123,8 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href=""
-              aria-label="Twitter"
+              href="https://x.com/Pixaify"
+              aria-label="X"
               className="hover:text-blue-400 transition"
             >
               <svg

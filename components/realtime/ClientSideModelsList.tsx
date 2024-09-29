@@ -85,7 +85,9 @@ export default function ClientSideModelsList({
           </h1>
           <div>
             <Link href="/overview/models/train">
-              <Button size={"lg"}>Train model</Button>
+              <Button className="bg-orange-600 hover:bg-orange-700" size={"lg"}>
+                Train model
+              </Button>
             </Link>
           </div>
         </div>
