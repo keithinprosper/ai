@@ -941,8 +941,7 @@ export async function POST(request: Request) {
     <!--[if mso]></div><![endif]-->
     <!--[if IE]></div><![endif]-->
   </body>
-</html>
-        `,
+</html>`,
       });
     }
 
