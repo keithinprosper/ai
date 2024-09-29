@@ -36,7 +36,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="/pricing"
+                href="/#pricing"
                 className="hover:text-slate-900 hover:underline transition"
               >
                 Pricing
@@ -69,7 +69,7 @@ const Footer = () => {
           <ul className="space-y-2">
             <li>
               <a
-                href="/faqs"
+                href="/#faqs"
                 className="hover:text-slate-900 hover:underline transition"
               >
                 FAQs
@@ -85,7 +85,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="/refund-policy"
+                href="/refund"
                 className="hover:text-slate-900 hover:underline transition"
               >
                 Refunds

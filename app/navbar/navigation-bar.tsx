@@ -29,7 +29,7 @@ export function NavigationMenuBar() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="https://www.pixaify.com/#pricing" legacyBehavior passHref>
+          <Link href="/#pricing" legacyBehavior passHref>
             <NavigationMenuLink
               className={`${navigationMenuTriggerStyle()} font-medium`}
             >
