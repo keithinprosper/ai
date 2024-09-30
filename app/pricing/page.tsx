@@ -30,11 +30,11 @@ const Pricing = () => {
             </div>
             <div className="flex flex-col text-center text-[4rem] font-extrabold leading-none tracking-tight lg:text-[4.5rem]">
               <span className="line-through text-[2.5rem] opacity-20">$39</span>
-              <span className="mt-1">$12</span>
+              <span className="mt-1">$10</span>
             </div>
             <ul className="flex-grow flex flex-col gap-3 pt-9 pb-10">
               <li className="text-black/70">
-                📸 <b>20</b> high-quality headshots
+                📸 <b>16</b> high-quality headshots
               </li>
               <li className="text-black/70">
                 ⏱️ <b>2</b>-hour processing time
@@ -73,12 +73,12 @@ const Pricing = () => {
                   $59
                 </span>
                 <span className="mt-1 text-gradient bg-gradient-to-l from-orange-700 to-red-400 bg-clip-text text-transparent">
-                  $30
+                  $25
                 </span>
               </div>
               <ul className="flex-grow flex flex-col gap-3 pt-9 pb-10">
                 <li className="text-black/70">
-                  📸 <b>60</b> high-quality headshots
+                  📸 <b>48</b> high-quality headshots
                 </li>
                 <li className="text-black/70">
                   ⏱️ <b>1</b>-hour processing time
@@ -112,11 +112,11 @@ const Pricing = () => {
             </div>
             <div className="flex flex-col text-center text-[4rem] font-extrabold leading-none tracking-tight lg:text-[4.5rem]">
               <span className="line-through text-[2.5rem] opacity-20">$99</span>
-              <span className="mt-1">$40</span>
+              <span className="mt-1">$35</span>
             </div>
             <ul className="flex-grow flex flex-col gap-3 pt-9 pb-10">
               <li className="text-black/70">
-                📸 <b>100</b> high-quality headshots
+                📸 <b>80</b> high-quality headshots
               </li>
               <li className="text-black/70">
                 ⏱️ <b>30</b>-min processing time
