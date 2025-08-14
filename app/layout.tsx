@@ -1,5 +1,5 @@
 import Footer from "@/app/footer/page";
-import Navbar from "@/app/navbar/page";
+import Navbar from "@/app/navbar/navigation-bar";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 import { Suspense } from "react";
