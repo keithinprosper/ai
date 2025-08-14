@@ -16,7 +16,6 @@ export default function RootLayout({ children }: any) {
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen">
-        <CustomCursor />
         <NextTopLoader color="rgb(249 115 22)" height={5} showSpinner={false} />
         <Suspense
           fallback={
