@@ -29,209 +29,235 @@ export default async function Navbar() {
   } = await supabase.from("credits").select("*").eq("user_id", user?.id ?? '').single()
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/60">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+    <nav className="sticky top-0 z-50 w-full bg-white shadow-sm border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           
-          {/* Logo/Brand */}
+          {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600">
-                <span className="text-sm font-bold text-white">P</span>
+            <Link href="/" className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-sm">H</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">Pixaify</span>
+              <span className="text-xl font-bold text-gray-900 tracking-tight">
+                Headshots AI
+              </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <Link
-                href="/blog"
-                className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
-              >
-                Blog
-              </Link>
-              
-              {user && (
-                <>
+          <div className="hidden md:flex items-center space-x-1">
+            <Link
+              href="/blog"
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all duration-200"
+            >
+              Blog
+            </Link>
+            
+            {user && (
+              <>
+                <Link
+                  href="/overview"
+                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all duration-200"
+                >
+                  Dashboard
+                </Link>
+                {stripeIsConfigured && (
                   <Link
-                    href="/overview"
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+                    href="/get-credits"
+                    className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all duration-200"
                   >
-                    Dashboard
+                    Get Credits
                   </Link>
-                  {stripeIsConfigured && (
-                    <Link
-                      href="/get-credits"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
-                    >
-                      Get Credits
+                )}
+              </>
+            )}
+            
+            <Link
+              href="/pricing"
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all duration-200"
+            >
+              Pricing
+            </Link>
+
+            <Link
+              href="/about"
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all duration-200"
+            >
+              About
+            </Link>
+          </div>
+
+          {/* Right Side - Auth & User Menu */}
+          <div className="flex items-center space-x-4">
+            {/* Credits Display */}
+            {user && stripeIsConfigured && (
+              <div className="hidden md:flex items-center">
+                <ClientSideCredits creditsRow={credits ? credits : null} />
+              </div>
+            )}
+
+            {/* Auth Buttons */}
+            {!user ? (
+              <div className="flex items-center space-x-3">
+                <Link href="/login">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="text-gray-700 hover:text-gray-900 font-medium hidden md:inline-flex"
+                  >
+                    Sign In
+                  </Button>
+                </Link>
+                <Link href="/login">
+                  <Button 
+                    size="sm" 
+                    className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-medium px-6 shadow-lg hover:shadow-xl transition-all duration-200"
+                  >
+                    Get Started
+                  </Button>
+                </Link>
+              </div>
+            ) : (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="relative h-9 w-9 rounded-full bg-orange-100 hover:bg-orange-200 transition-colors"
+                  >
+                    <AvatarIcon className="h-5 w-5 text-orange-600" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-64 p-2" align="end" forceMount>
+                  <DropdownMenuLabel className="font-normal p-3">
+                    <div className="flex flex-col space-y-2">
+                      <p className="text-sm font-medium text-gray-900">My Account</p>
+                      <p className="text-xs text-gray-500 truncate bg-gray-50 px-2 py-1 rounded">
+                        {user.email}
+                      </p>
+                    </div>
+                  </DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem asChild className="cursor-pointer">
+                    <Link href="/overview" className="flex items-center px-3 py-2">
+                      <span>Dashboard</span>
                     </Link>
+                  </DropdownMenuItem>
+                  {stripeIsConfigured && (
+                    <DropdownMenuItem asChild className="cursor-pointer">
+                      <Link href="/get-credits" className="flex items-center px-3 py-2">
+                        <span>Get Credits</span>
+                      </Link>
+                    </DropdownMenuItem>
                   )}
-                </>
-              )}
-              
-              <Link
-                href="/pricing"
-                className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
-              >
-                Pricing
-              </Link>
-            </div>
-          </div>
+                  <DropdownMenuItem asChild className="cursor-pointer">
+                    <Link href="/pricing" className="flex items-center px-3 py-2">
+                      <span>Pricing</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem className="p-0">
+                    <form action="/auth/sign-out" method="post" className="w-full">
+                      <Button
+                        type="submit"
+                        variant="ghost"
+                        size="sm"
+                        className="w-full justify-start px-3 py-2 h-auto font-normal text-red-600 hover:text-red-700 hover:bg-red-50"
+                      >
+                        Sign Out
+                      </Button>
+                    </form>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )}
 
-          {/* Right side - Auth & User Menu */}
-          <div className="hidden md:block">
-            <div className="ml-4 flex items-center space-x-4">
-              {/* Credits Display */}
-              {user && stripeIsConfigured && (
-                <div className="flex items-center space-x-2">
-                  <ClientSideCredits creditsRow={credits ? credits : null} />
-                </div>
-              )}
-
-              {/* Auth Buttons */}
-              {!user ? (
-                <div className="flex items-center space-x-2">
-                  <Link href="/login">
-                    <Button variant="ghost" size="sm" className="text-gray-700 hover:text-gray-900">
-                      Sign In
-                    </Button>
-                  </Link>
-                  <Link href="/login">
-                    <Button size="sm" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white border-0">
-                      Get Started
-                    </Button>
-                  </Link>
-                </div>
-              ) : (
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" size="sm" className="relative h-8 w-8 rounded-full">
-                      <AvatarIcon className="h-5 w-5" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-56" align="end" forceMount>
-                    <DropdownMenuLabel className="font-normal">
-                      <div className="flex flex-col space-y-1">
-                        <p className="text-sm font-medium leading-none">Account</p>
-                        <p className="text-xs leading-none text-muted-foreground truncate">
-                          {user.email}
-                        </p>
-                      </div>
-                    </DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem asChild>
-                      <Link href="/overview" className="cursor-pointer">
-                        Dashboard
-                      </Link>
-                    </DropdownMenuItem>
-                    {stripeIsConfigured && (
-                      <DropdownMenuItem asChild>
-                        <Link href="/get-credits" className="cursor-pointer">
-                          Get Credits
+            {/* Mobile Menu */}
+            <div className="md:hidden">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="h-9 w-9 p-0"
+                  >
+                    <HamburgerMenuIcon className="h-5 w-5" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-64 p-2" align="end">
+                  <DropdownMenuItem asChild className="cursor-pointer">
+                    <Link href="/blog" className="flex items-center px-3 py-2">
+                      Blog
+                    </Link>
+                  </DropdownMenuItem>
+                  
+                  {user && (
+                    <>
+                      <DropdownMenuItem asChild className="cursor-pointer">
+                        <Link href="/overview" className="flex items-center px-3 py-2">
+                          Dashboard
                         </Link>
                       </DropdownMenuItem>
-                    )}
-                    <DropdownMenuItem asChild>
-                      <Link href="/pricing" className="cursor-pointer">
-                        Pricing
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>
-                      <form action="/auth/sign-out" method="post" className="w-full">
-                        <Button
-                          type="submit"
-                          variant="ghost"
-                          size="sm"
-                          className="w-full justify-start p-0 h-auto font-normal"
-                        >
-                          Sign Out
-                        </Button>
-                      </form>
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              )}
-            </div>
-          </div>
+                      {stripeIsConfigured && (
+                        <DropdownMenuItem asChild className="cursor-pointer">
+                          <Link href="/get-credits" className="flex items-center px-3 py-2">
+                            Get Credits
+                          </Link>
+                        </DropdownMenuItem>
+                      )}
+                    </>
+                  )}
+                  
+                  <DropdownMenuItem asChild className="cursor-pointer">
+                    <Link href="/pricing" className="flex items-center px-3 py-2">
+                      Pricing
+                    </Link>
+                  </DropdownMenuItem>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="h-8 w-8">
-                  <HamburgerMenuIcon className="h-5 w-5" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56" align="end">
-                <DropdownMenuItem asChild>
-                  <Link href="/blog" className="cursor-pointer">
-                    Blog
-                  </Link>
-                </DropdownMenuItem>
-                
-                {user && (
-                  <>
-                    <DropdownMenuItem asChild>
-                      <Link href="/overview" className="cursor-pointer">
-                        Dashboard
-                      </Link>
-                    </DropdownMenuItem>
-                    {stripeIsConfigured && (
-                      <DropdownMenuItem asChild>
-                        <Link href="/get-credits" className="cursor-pointer">
-                          Get Credits
+                  <DropdownMenuItem asChild className="cursor-pointer">
+                    <Link href="/about" className="flex items-center px-3 py-2">
+                      About
+                    </Link>
+                  </DropdownMenuItem>
+                  
+                  <DropdownMenuSeparator />
+                  
+                  {!user ? (
+                    <>
+                      <DropdownMenuItem asChild className="cursor-pointer">
+                        <Link href="/login" className="flex items-center px-3 py-2">
+                          Sign In
                         </Link>
                       </DropdownMenuItem>
-                    )}
-                  </>
-                )}
-                
-                <DropdownMenuItem asChild>
-                  <Link href="/pricing" className="cursor-pointer">
-                    Pricing
-                  </Link>
-                </DropdownMenuItem>
-                
-                <DropdownMenuSeparator />
-                
-                {!user ? (
-                  <>
-                    <DropdownMenuItem asChild>
-                      <Link href="/login" className="cursor-pointer">
-                        Sign In
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link href="/login" className="cursor-pointer font-medium">
-                        Get Started
-                      </Link>
-                    </DropdownMenuItem>
-                  </>
-                ) : (
-                  <>
-                    <DropdownMenuItem className="text-sm text-gray-500">
-                      {user.email}
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <form action="/auth/sign-out" method="post" className="w-full">
-                        <Button
-                          type="submit"
-                          variant="ghost"
-                          size="sm"
-                          className="w-full justify-start p-0 h-auto font-normal"
-                        >
-                          Sign Out
-                        </Button>
-                      </form>
-                    </DropdownMenuItem>
-                  </>
-                )}
-              </DropdownMenuContent>
-            </DropdownMenu>
+                      <DropdownMenuItem asChild className="cursor-pointer">
+                        <Link href="/login" className="flex items-center px-3 py-2 font-medium text-orange-600">
+                          Get Started
+                        </Link>
+                      </DropdownMenuItem>
+                    </>
+                  ) : (
+                    <>
+                      <DropdownMenuItem className="px-3 py-2 text-xs text-gray-500">
+                        {user.email}
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className="p-0">
+                        <form action="/auth/sign-out" method="post" className="w-full">
+                          <Button
+                            type="submit"
+                            variant="ghost"
+                            size="sm"
+                            className="w-full justify-start px-3 py-2 h-auto font-normal text-red-600 hover:text-red-700"
+                          >
+                            Sign Out
+                          </Button>
+                        </form>
+                      </DropdownMenuItem>
+                    </>
+                  )}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
           </div>
         </div>
       </div>
