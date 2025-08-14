@@ -39,7 +39,7 @@ export default async function Navbar() {
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600">
                 <span className="text-sm font-bold text-white">P</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">Pixaify</span>
+<span className="text-xl font-bold text-red-600">🔥 BLOG NAVBAR WORKING 🔥</span>
             </Link>
           </div>
 
