@@ -6,7 +6,6 @@ import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import NextTopLoader from "nextjs-toploader";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import CustomCursor from "@/components/custom-cursor";
 
 export const metadata = {
   title: "Pixaify",
