@@ -8,12 +8,15 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+// Change this:
 } from "./ui/dropdown-menu";
-import Link from "next/link";
 import { Button } from "./ui/button";
-import React from "react";
-import { Database } from "@/types/supabase";
 import ClientSideCredits from "./realtime/ClientSideCredits";
+
+// To this:
+} from "../../components/ui/dropdown-menu";
+import { Button } from "../../components/ui/button";
+import ClientSideCredits from "../../components/realtime/ClientSideCredits";
 
 export const dynamic = "force-dynamic";
 const stripeIsConfigured = process.env.NEXT_PUBLIC_STRIPE_IS_ENABLED === "true";
