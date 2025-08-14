@@ -192,7 +192,7 @@ const Faqs = () => {
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center">
                     <Camera className="w-5 h-5 mr-3 text-blue-200" />
-                    <span className="text-blue-100">Premium quality starting at just $24.99</span>
+                    <span className="text-blue-100">Premium quality starting at just $10</span>
                   </div>
                   <div className="flex items-center">
                     <Users className="w-5 h-5 mr-3 text-blue-200" />
